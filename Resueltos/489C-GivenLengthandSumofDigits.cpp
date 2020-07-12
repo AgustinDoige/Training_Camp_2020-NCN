@@ -22,7 +22,6 @@ Examples:   Input:2 15 Output:69 96
 
 
 #include <iostream>
-#include <math.h>
 using namespace std;
 
 int main() {
