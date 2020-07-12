@@ -7,23 +7,10 @@ The input contains three positive integer numbers in the first line: n, m and 
 (1 ≤  n, m, a ≤ 10**9). */
 
 #include <iostream>
-using namespace std;
-
-
 int main() {
-    unsigned long long n, m, a;
-    unsigned long long aux1, aux2;
-    cin >> n >> m >> a;
-    if (m%a == 0) {
-        aux1 = m/a;
-    } else {
-        aux1 = m/a + 1;
-    }
-
-    if (n%a == 0) {
-        aux2 = n/a;
-    } else {
-        aux2 = n/a + 1;
-    }
-    cout << aux1*aux2 << endl;
+    unsigned long long n, m, a, aux1, aux2;
+    std::cin >> n >> m >> a;
+    aux1 = (m%a==0) ? m/a : m/a+1;
+    aux2 = (n%a==0) ? n/a : n/a+1;
+    std::cout << aux1*aux2 << std::endl;
 }
