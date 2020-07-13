@@ -1,6 +1,7 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-    return EXIT_SUCCESS;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 }
