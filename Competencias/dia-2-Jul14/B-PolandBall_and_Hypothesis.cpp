@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
-#define DBG(x) cout << #x << “ = ” << (x) << "\n"
- 
+  
 bool isPrime(int m) {
     bool result = true;
     int i=2;
