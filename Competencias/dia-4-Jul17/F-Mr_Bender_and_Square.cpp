@@ -19,6 +19,7 @@ long long luces_encendidas(long long t) {
     }
     return contador;
 }
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
