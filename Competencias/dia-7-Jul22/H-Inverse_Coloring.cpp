@@ -3,9 +3,7 @@ using namespace std;
  
 int add(int x, int y, int mod) {
     x += y;
-    if (x >= mod){
-        x -= mod;
-    }
+    if (x >= mod)x -= mod;
     return x;
 }
  
@@ -21,7 +19,6 @@ int main() {
         for(int j = 0; j < i; ++j) {
             for(int r = 0; r <= i; ++r) {
                 aux = max(r, i - j);
-                //cout << "aux = " << aux << "\n";
                 board[i][aux] = add(board[i][aux], board[j][r], mod);
             }
         }
@@ -30,12 +27,7 @@ int main() {
     int result = 0;
     for(int i = 1; i <= n; ++i) {
         for(int j = 1; j <= n; ++j) {
-            if (i * j < k) {
-                result = add(result, (long long)1 * board[n][i] * board[n][j] % mod, mod);
-                //cout << "board[n][j] = " << board[n][j] << "\n";
-                //cout << "board[n][i] = " << board[n][i] << "\n";
-                //cout << result << "\n";
-            }
+            if (i * j < k)result = add(result, (long long)1 * board[n][i] * board[n][j] % mod, mod);
         }
     }
     result = add(result, result, mod);
